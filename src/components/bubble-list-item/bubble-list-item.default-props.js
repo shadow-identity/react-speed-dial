@@ -13,6 +13,4 @@ export default {
 	onMouseEnter() {},
 	onMouseLeave() {},
 	onMouseUp() {},
-	onTouchEnd() {},
-	onTouchStart() {},
 };

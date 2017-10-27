@@ -62,9 +62,7 @@ class BubbleListItem extends React.Component {
 			return;
 		}
 
-		const { onTouchTap, onClick } = this.props;
-
-		(onTouchTap || onClick)(event);
+		this.props.onClick(event);
 	}
 
 	/**
@@ -164,7 +162,7 @@ class BubbleListItem extends React.Component {
 	 */
 	renderLink() {
 
-		const { href, onTouchTap, onClick, tabIndex, isOpen } = this.props;
+		const { href, onClick, tabIndex, isOpen } = this.props;
 		const styles = this.styles;
 
 		if (href) {
@@ -188,9 +186,9 @@ class BubbleListItem extends React.Component {
 				style={styles.wrap.main}
 				tabIndex={isOpen ? tabIndex : -1}
 				onBlur={this.handleBlur}
+				onClick={onClick}
 				onFocus={this.handleFocus}
 				onKeyUp={this.handleKeyUp}
-				onTouchTap={onTouchTap || onClick}
 			>
 				{this.renderContent()}
 			</a>

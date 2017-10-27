@@ -627,9 +627,9 @@ class SpeedDial extends React.Component {
 					style={this.getStylesBackdrop()}
 					tabIndex={isOpen ? (tabIndex + 1) : -1}
 					onBlur={this.handleBlurBackdrop}
+					onClick={this.handleClickBackdrop}
 					onFocus={this.handleFocusBackdrop}
 					onKeyUp={this.handleBackdropKeyUp}
-					onTouchTap={this.handleClickBackdrop}
 				/>
 			</span>
 		);
@@ -738,7 +738,7 @@ class SpeedDial extends React.Component {
 		const classNames = [className];
 
 		const btnProps = Object.assign({}, floatingActionButtonProps, {
-			onTouchTap: handleClick,
+			onClick: handleClick,
 		});
 
 		if (isInTransition && classNameInTransition) {

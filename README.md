@@ -30,12 +30,9 @@ npm install react-speed-dial
 ```jsx
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import Avatar from 'material-ui/Avatar';
 import { SpeedDial, BubbleList, BubbleListItem } from 'react-speed-dial';
-
-injectTapEventPlugin();
 
 const App = () => {
   return (

@@ -83,7 +83,7 @@ const Toolbox = ({ onClickCloseToolbox }) => (
 				return (
 					<BottomNavigationItem
 						key={item.id}
-						onTouchTap={onClickCloseToolbox}
+						onClick={onClickCloseToolbox}
 						{...item}
 					/>);
 			})}

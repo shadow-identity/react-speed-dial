@@ -28,7 +28,6 @@ function createPackageFile() {
 	delete packageData.dependencies['material-ui'];
 	delete packageData.dependencies.react;
 	delete packageData.dependencies['react-dom'];
-	delete packageData.dependencies['react-tap-event-plugin'];
 	delete packageData.dependencies['react-router'];
 	utils.writeFile(`${publishDir}/package.json`, JSON.stringify(packageData, null, 2));
 }

@@ -2,7 +2,6 @@
 import React from 'react';
 import { HashRouter, Route } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import Home from '../home/home';
 import ExampleBasic from '../example-basic/example-basic';
@@ -19,8 +18,6 @@ import ExampleToolboxFixed from '../example-toolbox-fixed/example-toolbox-fixed'
 import ExampleBug6 from '../example-bug6/example-bug6';
 import ExampleBug11 from '../example-bug11/example-bug11';
 import ExampleRtl from '../example-rtl/example-rtl';
-
-injectTapEventPlugin();
 
 const App = () => {
 	return (

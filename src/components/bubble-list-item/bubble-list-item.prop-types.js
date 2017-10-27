@@ -28,7 +28,4 @@ export default {
 	onMouseEnter: PropTypes.func,
 	onMouseLeave: PropTypes.func,
 	onMouseUp: PropTypes.func,
-	onTouchEnd: PropTypes.func,
-	onTouchStart: PropTypes.func,
-	onTouchTap: PropTypes.func,
 };

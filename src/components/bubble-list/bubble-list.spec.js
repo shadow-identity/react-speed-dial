@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import { shallow } from 'enzyme';
 
 import BubbleList from './bubble-list.js';
 import BubbleListItem from '../bubble-list-item/bubble-list-item.js';
 import getStylesFromShallowNode from '../../../tests/utils/get-styles-from-shallow-node';
 import muiTheme from '../../../tests/context-mui-theme';
-
-injectTapEventPlugin();
 
 describe('<BubbleList />', () => {
 

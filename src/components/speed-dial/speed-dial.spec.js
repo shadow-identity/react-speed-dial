@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
@@ -11,8 +10,6 @@ import BubbleList from '../bubble-list/bubble-list.js';
 import getDomFromString from '../../../tests/utils/get-dom-from-string';
 import getStylesFromDomNode from '../../../tests/utils/get-styles-from-dom-node';
 import getStylesFromShallowNode from '../../../tests/utils/get-styles-from-shallow-node';
-
-injectTapEventPlugin();
 
 const context = { muiTheme };
 const getShallowNode = (props) => {
@@ -362,7 +359,7 @@ describe('<SpeedDial />', () => {
 				<SpeedDial {...props} />, { context }
 			);
 
-			wrapper.find('FloatingActionButton').simulate('touchTap');
+			wrapper.find('FloatingActionButton').simulate('click');
 			expect(wrapper.state().isOpen).toEqual(true);
 		});
 
@@ -379,7 +376,7 @@ describe('<SpeedDial />', () => {
 				isOpen: true,
 			});
 
-			wrapper.find('FloatingActionButton').simulate('touchTap');
+			wrapper.find('FloatingActionButton').simulate('click');
 			expect(wrapper.state().isOpen).toEqual(false);
 			expect(onClickPrimaryButton.calledOnce).toEqual(true);
 		});
@@ -427,7 +424,7 @@ describe('<SpeedDial />', () => {
 			wrapper.setState({
 				isOpen: true,
 			});
-			wrapper.find('FloatingActionButton').simulate('touchTap');
+			wrapper.find('FloatingActionButton').simulate('click');
 			expect(wrapper.state().isOpen).toEqual(true);
 		});
 	});

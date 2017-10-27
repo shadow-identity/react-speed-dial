@@ -239,11 +239,6 @@ const props = {
 			required: false,
 			desc: 'Callback function fired when the element is clicked or touched.',
 		},
-		onTouchTap: {
-			type: 'function',
-			required: false,
-			desc: 'Callback function fired when the element is clicked or touched.',
-		},
 	},
 };
 

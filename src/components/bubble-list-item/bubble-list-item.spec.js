@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import Avatar from 'material-ui/Avatar';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
@@ -10,8 +9,6 @@ import muiTheme from '../../../tests/context-mui-theme';
 import getDomFromString from '../../../tests/utils/get-dom-from-string';
 import getStylesFromShallowNode from '../../../tests/utils/get-styles-from-shallow-node';
 import BubbleListItem from './bubble-list-item.js';
-
-injectTapEventPlugin();
 
 describe('<BubbleListItem />', () => {
 
@@ -96,18 +93,6 @@ describe('<BubbleListItem />', () => {
 		expect(wrapper.find('.m-bubble-list-item').length).toEqual(1);
 	});
 
-	it('simulate onTouchTap', () => {
-		const onButtonClick = sinon.spy();
-		const wrapper = shallow(
-			<BubbleListItem
-				primaryText="Hello world!"
-				onTouchTap={onButtonClick}
-			/>, { context }
-		);
-		wrapper.find('a').simulate('touchTap');
-		expect(onButtonClick.calledOnce).toEqual(true);
-	});
-
 	it('simulate onClick', () => {
 		const onButtonClick = sinon.spy();
 		const wrapper = shallow(
@@ -116,11 +101,11 @@ describe('<BubbleListItem />', () => {
 				onClick={onButtonClick}
 			/>, { context }
 		);
-		wrapper.find('a').simulate('touchTap');
+		wrapper.find('a').simulate('click');
 		expect(onButtonClick.calledOnce).toEqual(true);
 	});
 
-	it('on keyUp enter onClick | onTouchTap is fired', () => {
+	it('on keyUp enter onClick is fired', () => {
 		const onKeyUp = sinon.spy();
 		const wrapper = shallow(
 			<BubbleListItem

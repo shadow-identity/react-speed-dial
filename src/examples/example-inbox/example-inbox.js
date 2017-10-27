@@ -24,12 +24,12 @@ const list = {
 		{
 			primaryText: 'Raquel Parrado',
 			rightAvatar: <Avatar src={`${avatarImgUrl}/7`} />,
-			onTouchTap() { console.log('touchTap on "Raquel Parrado"'); },
+			onClick() { console.log('click or tap on "Raquel Parrado"'); },
 		},
 		{
 			primaryText: 'Remember',
 			rightAvatar: <Avatar backgroundColor={blue500} icon={<IconRemember />} />,
-			onTouchTap() { console.log('touchTap on "Remember"'); },
+			onClick() { console.log('click or tap on "Remember"'); },
 		},
 	],
 };
